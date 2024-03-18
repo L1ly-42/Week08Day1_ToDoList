@@ -16,6 +16,10 @@ form.addEventListener('submit', (evt)=>{
     // removeItem(newListItem);
     newListItem.innerText = evt.target["new-todo"].value;
     newListItem.appendChild(deleteButton);
+    deleteButton.addEventListener("click", () =>  {
+        newListItem.remove();
+
+    })
     list.appendChild(newListItem);
     
 });
