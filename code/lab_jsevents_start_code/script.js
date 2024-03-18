@@ -8,7 +8,7 @@ const list = document.querySelector("#list");
 //     });
 // }
 
-form.addEventListener('submit', (evt)=>{
+form.addEventListener('submit', (evt) => {
     evt.preventDefault();
     const newListItem = document.createElement('li');
     const deleteButton = document.createElement("button");
@@ -16,11 +16,18 @@ form.addEventListener('submit', (evt)=>{
     // removeItem(newListItem);
     newListItem.innerText = evt.target["new-todo"].value;
     newListItem.appendChild(deleteButton);
-    deleteButton.addEventListener("click", () =>  {
+    deleteButton.addEventListener("click", () => {
         newListItem.remove();
 
     })
     list.appendChild(newListItem);
-    
+});
+
+const dateButton = document.querySelector("#show-date")
+const dateDisplay = document.querySelector("#dat-display")
+
+dateButton.addEventListener("click", (evt) =>{
+    const date = newDate();
+    dateDisplay.innerText = new Intl.DateTimeFormat('en-UK').format(date);
 });
 
