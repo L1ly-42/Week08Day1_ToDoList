@@ -31,8 +31,18 @@ form.addEventListener('submit', (evt) => {
 const dateButton = document.querySelector("#show-date");
 const dateDisplay = document.querySelector("#date-display");
 
+<<<<<<< HEAD
 dateButton.addEventListener("click", (evt) => {
     const date = newDate();
+=======
+//Adding date button
+
+const dateButton = document.querySelector("#show-date")
+const dateDisplay = document.querySelector("#date-display")
+
+dateButton.addEventListener("click", (evt) =>{
+    const date = new Date();
+>>>>>>> efde02c43226580d2b58b3c5dddf230dfb8ec9c1
     dateDisplay.innerText = new Intl.DateTimeFormat('en-UK').format(date);
 });
 
