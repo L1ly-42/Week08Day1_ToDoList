@@ -23,11 +23,13 @@ form.addEventListener('submit', (evt) => {
     list.appendChild(newListItem);
 });
 
+//Adding date button
+
 const dateButton = document.querySelector("#show-date")
-const dateDisplay = document.querySelector("#dat-display")
+const dateDisplay = document.querySelector("#date-display")
 
 dateButton.addEventListener("click", (evt) =>{
-    const date = newDate();
+    const date = new Date();
     dateDisplay.innerText = new Intl.DateTimeFormat('en-UK').format(date);
 });
 
