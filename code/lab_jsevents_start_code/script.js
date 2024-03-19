@@ -29,6 +29,7 @@ form.addEventListener('submit', (evt) => {
     // adding event listener to complete button that makes it move li to completed list
     completeButton.addEventListener("click", () => {
         completedList.appendChild(newListItem);
+        completeButton.remove();
     });
 
     // adding finished li to ul
